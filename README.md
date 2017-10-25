@@ -1,12 +1,12 @@
 
-##litx
+## litx
 litx是一个基于补偿的轻量级分布式事务框架。（目前只支持dubbo，未来计划支持http等其他rpc调用的补偿）
 
 * 对代码逻辑无侵入
 * 和spring事务隔离级别无缝结合
 * 自动回滚补偿接口
 
-##Quick Start
+## Quick Start
 也可以参考litx-test的测试用例，其工程演示了在dubbo环境下的测试情况。
 
 也可参照以下代码进行快速配置
