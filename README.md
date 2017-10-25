@@ -3,8 +3,9 @@
 litx是一个基于补偿的轻量级分布式事务框架。（目前只支持dubbo，未来计划支持http等其他rpc调用的补偿）
 
 * 对代码逻辑无侵入
-* 和spring事务隔离级别无缝结合
+* 和spring事务无缝结合（支持spring的事务隔离级别）
 * 自动回滚补偿接口
+* 如回滚异常提供hook接口可供扩展，可以自行处理
 
 ## Quick Start
 也可以参考litx-test的测试用例，其工程演示了在dubbo环境下的测试情况。
@@ -12,8 +13,9 @@ litx是一个基于补偿的轻量级分布式事务框架。（目前只支持d
 也可参照以下代码进行快速配置
 
 第一步
-定义你相关接口的rollback接口。假设你的dubbo方法为submitOrder，回滚接口命名规则为rollbackSubmitOrder，请求参数定义为你submitOrder的返回类型。
-在你的接口上加入@Compensable标注
+定义你相关接口的rollback接口。假设你的dubbo方法为submitOrder，回滚接口命名规则为rollbackSubmitOrder，请求参数定义为你submitOrder的返回类型。加上spring的事务标注@Transactional
+并且再你的接口上加入@Compensable标注
+
 ```java
 public interface DemoService {
 	
