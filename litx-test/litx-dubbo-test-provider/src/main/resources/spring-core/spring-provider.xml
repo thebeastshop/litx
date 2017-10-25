@@ -10,6 +10,6 @@
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         ">
 
-	<dubbo:service interface="com.thebeastshop.lix.test.provider.service.DemoService" ref="demoService" />
+	<dubbo:service interface="com.thebeastshop.litx.test.provider.service.DemoService" ref="demoService" />
 
 </beans>

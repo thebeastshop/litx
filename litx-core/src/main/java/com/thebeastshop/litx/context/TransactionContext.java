@@ -19,27 +19,12 @@ import java.util.concurrent.Executors;
 public class TransactionContext {
     private final static Logger log = LoggerFactory.getLogger(TransactionContext.class);
 
-    private final static ExecutorService executorService = Executors.newCachedThreadPool();
-
     private final ConcurrentLinkedDeque<InvokeContent> deque = new ConcurrentLinkedDeque<>();
 
     public void doRollback() {
         while (!deque.isEmpty()) {
             final InvokeContent invokeContent = deque.pollLast();
             invokeContent.rollback();
-            MethodDefinition defination = invokeContent.getDefination();
-            log.info(" [LITX]成功回滚RPC方法 " + MethodUtil.getMethodNameWithArguments(
-                    defination.getInterfaceClass(),
-                    defination.getMethod().getName(),
-                    invokeContent.getArguments()
-            ));
-//            executorService.execute(new Runnable() {
-//                @Override
-//                public void run() {
-//                    invokeContent.rollback();
-//                    log.info(" [LITX]回滚RPC方法 " + invokeContent.getDefination().getMethodName());
-//                }
-//            });
         }
     }
 

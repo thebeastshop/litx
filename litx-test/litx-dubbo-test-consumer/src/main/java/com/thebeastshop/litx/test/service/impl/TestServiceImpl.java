@@ -1,8 +1,9 @@
 package com.thebeastshop.litx.test.service.impl;
 
 import javax.annotation.Resource;
+
+import com.thebeastshop.litx.test.provider.service.DemoService;
 import com.thebeastshop.litx.test.service.TestService;
-import com.thebeastshop.lix.test.provider.service.DemoService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,6 @@ public class TestServiceImpl implements TestService {
     public void test1() {
     	demoService.test1();
     	demoService.test2();
-    	throw new RuntimeException();
     }
 
     @Override

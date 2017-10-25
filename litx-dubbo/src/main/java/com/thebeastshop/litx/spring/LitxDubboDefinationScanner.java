@@ -2,6 +2,7 @@ package com.thebeastshop.litx.spring;
 
 import com.alibaba.dubbo.config.spring.ReferenceBean;
 import com.thebeastshop.litx.annotations.Compensable;
+import com.thebeastshop.litx.content.RollbackInvokeHook;
 import com.thebeastshop.litx.definition.CompensableMethodDefinition;
 import com.thebeastshop.litx.definition.DefinitionManager;
 import com.thebeastshop.litx.definition.LitTransactionType;
@@ -45,6 +46,14 @@ public class LitxDubboDefinationScanner implements BeanPostProcessor,
             referenceBean.setFilter("litxFilter");
             Class targetClass = referenceBean.getObjectType();
             registerDefinationList(targetClass);
+        }
+        if(RollbackInvokeHook.class.isAssignableFrom(clazz)){
+        	try {
+        		log.info(" [LITX] 初始化rollbackInvokeHook:"+clazz.getName());
+				DefinitionManager.setRollbackInvokeHook((RollbackInvokeHook)clazz.newInstance());
+			} catch (InstantiationException | IllegalAccessException e) {
+				log.error(" [LITX] 初始化回滚HOOK实现时出错",e);
+			}
         }
         return bean;
     }

@@ -9,6 +9,6 @@
 
     <dubbo:consumer timeout="${dubbo.timeout}" retries="0" check="false" />
 
-    <dubbo:reference id="demoService" interface="com.thebeastshop.lix.test.provider.service.DemoService"/>
+    <dubbo:reference id="demoService" interface="com.thebeastshop.litx.test.provider.service.DemoService"/>
 
 </beans>

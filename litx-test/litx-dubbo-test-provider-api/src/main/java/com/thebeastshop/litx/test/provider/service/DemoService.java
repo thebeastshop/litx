@@ -1,4 +1,4 @@
-package com.thebeastshop.lix.test.provider.service;
+package com.thebeastshop.litx.test.provider.service;
 
 import com.thebeastshop.litx.annotations.Compensable;
 

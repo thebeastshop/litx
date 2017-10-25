@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.thebeastshop.lix.test.provider.service.DemoService;
+import com.thebeastshop.litx.test.provider.service.DemoService;
 
 import java.util.Date;
 
@@ -44,6 +44,7 @@ public class DemoServiceImpl implements DemoService {
 	@Override
 	public void rollbackTest1(String str) {
 		log.info("***************do rollbackTest1****************");
+		throw new RuntimeException("rollback cause exception");
 		
 	}
 	
