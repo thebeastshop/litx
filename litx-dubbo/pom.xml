@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+	<artifactId>litx-dubbo</artifactId>
+    <name>litx-dubbo</name>
+
+	<parent>
+		<groupId>com.thebeastshop</groupId>
+		<artifactId>litx</artifactId>
+		<version>1.0.2-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.thebeastshop</groupId>
+			<artifactId>litx-core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
