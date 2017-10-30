@@ -9,6 +9,4 @@ import org.springframework.context.annotation.Bean;
 public interface TestService {
 
     void test1();
-
-    void test2();
 }

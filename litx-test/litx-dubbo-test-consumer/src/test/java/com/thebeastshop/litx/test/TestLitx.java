@@ -28,11 +28,4 @@ public class TestLitx {
     public void test1() throws IOException {
     	testService.test1();
     }
-
-    @Test
-    public void test2() {
-        testService.test2();
-    }
-
-
 }

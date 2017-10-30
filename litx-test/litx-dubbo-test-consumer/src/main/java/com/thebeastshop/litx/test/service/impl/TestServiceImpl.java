@@ -28,11 +28,4 @@ public class TestServiceImpl implements TestService {
     	demoService.test1();
     	demoService.test2();
     }
-
-    @Override
-    @Transactional
-    public void test2() {
-    	
-    }
-
 }

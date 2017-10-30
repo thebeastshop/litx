@@ -45,7 +45,6 @@ public class DemoServiceImpl implements DemoService {
 	public void rollbackTest1(String str) {
 		log.info("***************do rollbackTest1****************");
 		throw new RuntimeException("rollback cause exception");
-		
 	}
 	
 	@Override
