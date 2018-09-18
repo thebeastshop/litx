@@ -85,3 +85,6 @@ atlassian-ide-plugin.xml
 */logs
 
 /payClear-timer/.tern-project
+/litx-test/litx-dubbo-test-consumer/target
+/litx-test/litx-dubbo-test-provider-api/target
+/litx-test/litx-dubbo-test-provider/target

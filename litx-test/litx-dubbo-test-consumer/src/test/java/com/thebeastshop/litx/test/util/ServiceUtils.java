@@ -7,11 +7,11 @@ import com.alibaba.dubbo.config.RegistryConfig;
 public class ServiceUtils {
 	public static <S>  S getService(Class<S> c){
 		ApplicationConfig application = new ApplicationConfig();
-		application.setName("beast-litx");
+		application.setName("beast-litx-demo-runner");
 		 
 		RegistryConfig registry = new RegistryConfig();
 		registry.setAddress("zookeeper://114.55.174.189:2181");
-		registry.setGroup("dubbo-zhang");
+		registry.setGroup("dubbo-litx");
 
 		ReferenceConfig<S> reference = new ReferenceConfig<S>(); 
 		reference.setApplication(application);

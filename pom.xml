@@ -153,6 +153,6 @@
 	<modules>
 		<module>litx-core</module>
 		<module>litx-dubbo</module>
-		<module>litx-dubbo-test</module>
+		<module>litx-test</module>
 	</modules>
 </project>
